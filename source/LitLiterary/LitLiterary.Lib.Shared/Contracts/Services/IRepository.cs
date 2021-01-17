@@ -5,10 +5,10 @@ namespace LitLiterary.Lib.Shared.Contracts.Services
 {
     public interface IRepository<in TPrimaryKey, TDomainObject>
     {
-        Task<IEnumerable<TDomainObject>> GetAll();
-        Task<TDomainObject> Get(TPrimaryKey id);
-        Task<TDomainObject> Create(TDomainObject entity);
-        Task<TDomainObject> Update(TPrimaryKey id, TDomainObject entity);
-        Task<bool> Delete(TPrimaryKey id);
+        Task<IEnumerable<TDomainObject>> GetAllAsync();
+        Task<TDomainObject> GetAsync(TPrimaryKey id);
+        Task<TDomainObject> CreateAsync(TDomainObject entity);
+        Task<TDomainObject> UpdateAsync(TPrimaryKey id, TDomainObject entity);
+        Task<bool> DeleteAsync(TPrimaryKey id);
     }
 }
