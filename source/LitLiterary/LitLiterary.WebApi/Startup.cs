@@ -1,7 +1,3 @@
-using System;
-using LitLiteracy.Lib.Domain.Services;
-using LitLiterary.Lib.Shared.Contracts.Services;
-using LitLiterary.Lib.Shared.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,8 +23,6 @@ namespace LitLiterary.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LitLiterary.WebApi", Version = "v1" });
             });
-
-            services.AddSingleton<IRepository<Guid, DomainObject>, LibraryRepository<DomainObject>>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
